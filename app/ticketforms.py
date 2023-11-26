@@ -1,5 +1,5 @@
 import ttkbootstrap as ttk 
-from db_engine import session, RegularTicket, SpecialtyTicket
+from .db_engine import session, RegularTicket, SpecialtyTicket
 
 def rt_form():
     window = ttk.Toplevel(title="Regular Ticket Entry")
@@ -55,23 +55,23 @@ def rt_form():
     def cmd_dupdown():
         cmd_save()
         vals = (v_firstname.get(), v_lastname.get(), v_phonenumber.get(), v_preferstext.get())
-        if v_to.get() > v_id.get():
+        if v_id.get() < v_to.get():
             v_id.set(v_id.get()+1)
-        v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
-        cmd_save()
-        cmd_id_update()
+            v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
+            cmd_save()
+            cmd_id_update()
 
     def cmd_dupup():
         cmd_save()
         vals = (v_firstname.get(), v_lastname.get(), v_phonenumber.get(), v_preferstext.get())
         if v_id.get() > v_from.get():
             v_id.set(v_id.get()-1)
-        v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
-        cmd_save()
-        cmd_id_update()
+            v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
+            cmd_save()
+            cmd_id_update()
 
     def cmd_movedown():
-        if v_to.get() > v_id.get():
+        if v_id.get() < v_to.get():
             v_id.set(v_id.get()+1)
             cmd_id_update()
 
@@ -136,10 +136,10 @@ def rt_form():
     btn_duplicateup = ttk.Button(frm_commands, text="Duplicate Up - Alt U", bootstyle="secondary", command=cmd_dupup)
     btn_duplicateup.pack(side="left", padx=4, pady=4)
 
-    btn_down = ttk.Button(frm_commands, text="Move Down - Alt L", bootstyle="secondary", command=cmd_movedown)
+    btn_down = ttk.Button(frm_commands, text="Down - Alt L", bootstyle="secondary", command=cmd_movedown)
     btn_down.pack(side="left", padx=4, pady=4)
 
-    btn_up = ttk.Button(frm_commands, text="Move Up - Alt O", bootstyle="secondary", command=cmd_moveup)
+    btn_up = ttk.Button(frm_commands, text="Up - Alt O", bootstyle="secondary", command=cmd_moveup)
     btn_up.pack(side="left", padx=4, pady=4)
 
     # Treeview Widgets
@@ -244,23 +244,23 @@ def st_form():
     def cmd_dupdown():
         cmd_save()
         vals = (v_firstname.get(), v_lastname.get(), v_phonenumber.get(), v_preferstext.get())
-        if v_to.get() > v_id.get():
+        if v_id.get() < v_to.get():
             v_id.set(v_id.get()+1)
-        v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
-        cmd_save()
-        cmd_id_update()
+            v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
+            cmd_save()
+            cmd_id_update()
 
     def cmd_dupup():
         cmd_save()
         vals = (v_firstname.get(), v_lastname.get(), v_phonenumber.get(), v_preferstext.get())
         if v_id.get() > v_from.get():
             v_id.set(v_id.get()-1)
-        v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
-        cmd_save()
-        cmd_id_update()
+            v_firstname.set(vals[0]), v_lastname.set(vals[1]), v_phonenumber.set(vals[2]), v_preferstext.set(vals[3])
+            cmd_save()
+            cmd_id_update()
 
     def cmd_movedown():
-        if v_to.get() > v_id.get():
+        if v_id.get() < v_to.get():
             v_id.set(v_id.get()+1)
             cmd_id_update()
 
@@ -325,10 +325,10 @@ def st_form():
     btn_duplicateup = ttk.Button(frm_commands, text="Duplicate Up - Alt U", bootstyle="primary", command=cmd_dupup)
     btn_duplicateup.pack(side="left", padx=4, pady=4)
 
-    btn_down = ttk.Button(frm_commands, text="Move Down - Alt L", bootstyle="primary", command=cmd_movedown)
+    btn_down = ttk.Button(frm_commands, text="Down - Alt L", bootstyle="primary", command=cmd_movedown)
     btn_down.pack(side="left", padx=4, pady=4)
 
-    btn_up = ttk.Button(frm_commands, text="Move Up - Alt O", bootstyle="primary", command=cmd_moveup)
+    btn_up = ttk.Button(frm_commands, text="Up - Alt O", bootstyle="primary", command=cmd_moveup)
     btn_up.pack(side="left", padx=4, pady=4)
 
     # Treeview Widgets
