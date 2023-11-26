@@ -8,7 +8,7 @@ For now it has the following dependencies, since I haven't compiled from source:
 
 * MainMenu (mostly complete)
 * Ticket Forms (mostly complete)
-* Basket Forms (**not** complete)
+* Basket Forms (mostly complete)
 * Drawing Forms (**not** complete)
 * Reports (**not** complete)
 * Settings Forms (**not** complete)
