@@ -1,6 +1,7 @@
 import ttkbootstrap as ttk
 from .ticketforms import rt_form, st_form
 from .basketforms import rb_form, sb_form
+from .drawingforms import rd_form, sd_form
 from .settingforms import db_settings_window
 
 def mainmenu():
@@ -43,10 +44,10 @@ def mainmenu():
     btn_specialtybaskets.pack(expand=True, fill="both", padx=4, pady=4)
 
     # Buttons for drawing
-    btn_regulardrawing = ttk.Button(frm_drawing, text="Regular Drawing", bootstyle="secondary", width=20)
+    btn_regulardrawing = ttk.Button(frm_drawing, text="Regular Drawing", bootstyle="secondary", width=20, command=rd_form)
     btn_regulardrawing.pack(expand=True, fill="both", padx=4, pady=4)
 
-    btn_specialtydrawing = ttk.Button(frm_drawing, text="Specialty Drawing", bootstyle="primary", width=20)
+    btn_specialtydrawing = ttk.Button(frm_drawing, text="Specialty Drawing", bootstyle="primary", width=20, command=sd_form)
     btn_specialtydrawing.pack(expand=True, fill="both", padx=4, pady=4)
 
     # Buttons for reports

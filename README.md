@@ -9,7 +9,7 @@ For now it has the following dependencies, since I haven't compiled from source:
 * MainMenu (mostly complete)
 * Ticket Forms (mostly complete)
 * Basket Forms (mostly complete)
-* Drawing Forms (**not** complete)
+* Drawing Forms (mostly complete)
 * Reports (**not** complete)
 * Settings Forms (**not** complete)
 
