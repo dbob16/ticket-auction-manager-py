@@ -2,6 +2,7 @@ import ttkbootstrap as ttk
 from .ticketforms import rt_form, st_form
 from .basketforms import rb_form, sb_form
 from .drawingforms import rd_form, sd_form
+from .reportforms import rr_form
 from .settingforms import db_settings_window
 
 def mainmenu():
@@ -51,7 +52,7 @@ def mainmenu():
     btn_specialtydrawing.pack(expand=True, fill="both", padx=4, pady=4)
 
     # Buttons for reports
-    btn_regularreports = ttk.Button(frm_reports, text="Regular Reports", bootstyle="secondary")
+    btn_regularreports = ttk.Button(frm_reports, text="Regular Reports", bootstyle="secondary", command=rr_form)
     btn_regularreports.pack(side="left", expand=True, fill="both", padx=4, pady=4)
 
     btn_specialtyreports = ttk.Button(frm_reports, text="Specialty Reports", bootstyle="primary")
