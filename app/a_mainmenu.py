@@ -2,8 +2,9 @@ import ttkbootstrap as ttk
 from .ticketforms import rt_form, st_form
 from .basketforms import rb_form, sb_form
 from .drawingforms import rd_form, sd_form
-from .reportforms import rr_form
+from .reportforms import rr_form, sr_form
 from .settingforms import db_settings_window
+from .stress_test import stresstest
 
 def mainmenu():
     window = ttk.Window(title="Main Menu | Ticket Auction Manager", themename="cyborg")
@@ -55,11 +56,14 @@ def mainmenu():
     btn_regularreports = ttk.Button(frm_reports, text="Regular Reports", bootstyle="secondary", command=rr_form)
     btn_regularreports.pack(side="left", expand=True, fill="both", padx=4, pady=4)
 
-    btn_specialtyreports = ttk.Button(frm_reports, text="Specialty Reports", bootstyle="primary")
+    btn_specialtyreports = ttk.Button(frm_reports, text="Specialty Reports", bootstyle="primary", command=sr_form)
     btn_specialtyreports.pack(side="left", expand=True, fill="both", padx=4, pady=4)
 
     # Buttons for settings
     btn_dbsettings = ttk.Button(frm_settings, text="Database Settings", bootstyle=("warning", "outline"), width=17, command=db_settings_window)
     btn_dbsettings.pack(side="left", padx=4, pady=4)
+
+    btn_stress_test = ttk.Button(frm_settings, text="Stress Test", bootstyle=("warning", "outline"), command=stresstest)
+    btn_stress_test.pack(side="left", padx=4, pady=4)
 
     window.mainloop()

@@ -3,6 +3,8 @@ For now it has the following dependencies, since I haven't compiled from source:
 
 * sqlalchemy, latest
 * ttkbootstrap, latest
+* jinja2, latest
+* names, (only if using stress test)
 
 # Progress
 
@@ -10,7 +12,7 @@ For now it has the following dependencies, since I haven't compiled from source:
 * Ticket Forms (mostly complete)
 * Basket Forms (mostly complete)
 * Drawing Forms (mostly complete)
-* Reports (**not** complete)
+* Reports (mostly complete)
 * Settings Forms (**not** complete)
 
 So far this is **not** production ready at all. It's still in active development, I'm mainly posting it just to see if the community wants to help build this thing.
